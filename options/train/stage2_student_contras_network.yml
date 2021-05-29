@@ -1,0 +1,83 @@
+name: stage2_student_contras_network
+use_tb_logger: true
+model_type: StudentContrasDistillationModel
+scale: 4
+crop_border: ~
+set_CUDA_VISIBLE_DEVICES: ~
+gpu_ids: [1]
+
+# datasets
+datasets:
+  train:
+    name: CUFED
+    type: ContrasDataset
+    dataroot_in: ../datasets/CUFED/input
+    dataroot_ref: ../datasets/CUFED/ref
+    io_backend:
+      type: disk
+
+    gt_size: 160
+    use_flip: true
+    use_rot: true
+
+    bicubic_model: PIL
+
+    use_shuffle: true
+    n_workers: 6  # per GPU
+    batch_size: 8
+    dataset_enlarge_ratio: 1000
+  val:
+    name: val_CUFED
+    type: ContrasValDataset
+    dataroot_in: ../datasets/CUFED5
+    dataroot_ref: ../datasets/CUFED5
+    io_backend:
+      type: disk
+
+    ann_file: ../datasets/contras_val.txt
+
+    bicubic_model: PIL
+
+# network structures
+network_student:
+  type: ContrasExtractorSep
+network_teacher:
+  type: ContrasExtractorSep
+
+
+# path
+path:
+  pretrain_model_student: ~
+  pretrain_model_teacher: ../experiments/stage1_teacher_contras_network/models/net_g_latest.pth
+  strict_load: true
+  resume_state: ~
+
+# training settings: learning rate scheme, loss
+train:
+  lr_g: !!float 1e-3
+  lr_scheme: MultiStepLR
+
+  niter: 75000
+  warmup_iter: -1  # no warm up
+  lr_steps: [72545]
+  lr_gamma: 0.1
+
+  manual_seed: 10
+  margin: 1.0
+  safe_radius: 4
+  scaling_steps: 2
+  distill_weight: 15.0
+  temperature: 0.15
+
+val:
+  val_freq: !!float 1e3
+  save_img: True
+
+# logger
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 1e3
+
+dist_params:
+  backend: nccl
+  port: 29746

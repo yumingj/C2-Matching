@@ -1,0 +1,101 @@
+name: stage3_restoration_mse
+use_tb_logger: true
+model_type: RefRestorationModel
+map_type: online_CUFED_swap
+scale: 4
+crop_border: ~
+set_CUDA_VISIBLE_DEVICES: ~
+gpu_ids: [4]
+
+# datasets
+datasets:
+  train:
+    name: CUFED
+    type: RefCUFEDDataset
+    dataroot_in: ../datasets/CUFED/input
+    dataroot_ref: ../datasets/CUFED/ref
+    io_backend:
+      type: disk
+
+    gt_size: 160
+    use_flip: true
+    use_rot: true
+
+    bicubic_model: PIL
+
+    use_shuffle: true
+    n_workers: 6  # per GPU
+    batch_size: 9
+    dataset_enlarge_ratio: 1000
+
+  val:
+    name: val_CUFED
+    type: RefCUFEDDataset
+    dataroot_in: ../datasets/CUFED5
+    dataroot_ref: ../datasets/CUFED5
+    io_backend:
+      type: disk
+
+    ann_file: ../datasets/CUFED5_pairs.txt
+
+    bicubic_model: PIL
+
+# network structures
+network_g:
+  type: RestorationNet
+  ngf: 64
+  n_blocks: 16
+  groups: 8
+network_map:
+  type: CorrespondenceGenerationArch
+  patch_size: 3
+  stride: 1
+  vgg_layer_list: ['relu1_1', 'relu2_1', 'relu3_1']
+  vgg_type: 'vgg19'
+network_extractor:
+  type: ContrasExtractorSep
+
+# path
+path:
+  pretrain_model_g: ~
+  pretrain_model_d: ~
+  pretrain_model_feature_extractor: ../experiments/stage2_student_contras_network/models/net_student_latest.pth
+  strict_load: true
+  resume_state: ~
+
+# training settings: learning rate scheme, loss
+train:
+  lr_g: !!float 1e-4
+  lr_offset: !!float 1e-4
+  lr_relu2_offset: !!float 1e-5
+  lr_relu3_offset: !!float 1e-6
+  weight_decay_g: 0
+  beta_g: [0.9, 0.999]
+  lr_d: !!float 1e-4
+  weight_decay_d: 0
+  beta_d: [0.9, 0.999]
+  lr_scheme: MultiStepLR
+
+  niter: 255000
+  warmup_iter: -1  # no warm up
+  net_g_pretrain_steps: 0
+  lr_steps: [72545, 211040]
+  lr_gamma: 0.1
+
+  pixel_criterion: L1Loss
+  pixel_weight: !!float 1.0
+
+  manual_seed: 10
+
+val:
+  val_freq: !!float 5e3
+  save_img: True
+
+# logger
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 5e3
+
+dist_params:
+  backend: nccl
+  port: 29746

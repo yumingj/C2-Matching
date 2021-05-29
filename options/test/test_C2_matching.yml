@@ -1,0 +1,44 @@
+name: C2_matching_gan
+suffix: ~  # add suffix to saved images
+scale: 4
+model_type: RefRestorationModel
+set_CUDA_VISIBLE_DEVICES: ~
+crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
+gpu_ids: [1]
+
+datasets:
+  test_1:  # the 1st test dataset
+    name: dataset_dame
+    type: RefCUFEDDataset
+    dataroot_in: path-to-input-data
+    dataroot_ref: path-to-input-data
+    io_backend:
+      type: disk
+
+    bicubic_model: PIL
+
+    ann_file: path-to-ann-files
+
+val_func: BasicSRValidation
+save_img: true
+
+#### network structures
+network_g:
+  type: RestorationNet
+  ngf: 64
+  n_blocks: 16
+  groups: 8
+network_map:
+  type: CorrespondenceGenerationArch
+  patch_size: 3
+  stride: 1
+  vgg_layer_list: ['relu1_1', 'relu2_1', 'relu3_1']
+  vgg_type: 'vgg19'
+network_extractor:
+  type: ContrasExtractorSep
+
+#### path
+path:
+  pretrain_model_g: ../experiments/pretrained_models/c2_matching_restoration.pth
+  pretrain_model_feature_extractor: ../experiments/pretrained_models/feature_extraction.pth
+  strict_load: true
