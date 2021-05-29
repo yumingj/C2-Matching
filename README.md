@@ -2,7 +2,6 @@
 
 ![Python 3.7](https://img.shields.io/badge/python-3.7-green.svg?style=plastic)
 ![pytorch 1.4.0](https://img.shields.io/badge/pytorch-1.4.0-green.svg?style=plastic)
-![CUDA 10.0](https://camo.githubusercontent.com/5e1f2e59c9910aa4426791d95a714f1c90679f5a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f637564612d31302e312d677265656e2e7376673f7374796c653d706c6173746963)
 
 This repository contains the implementation of the following paper:
 > **Robust Reference-based Super-Resolution via C2-Matching**<br>
@@ -21,7 +20,8 @@ This repository contains the implementation of the following paper:
 
 - Python >= 3.7
 - PyTorch >= 1.4
-- CUDA 10.0
+- CUDA 10.0 or CUDA 10.1
+- GCC 5.4.0
 
 1. Clone Repo
 
@@ -41,7 +41,7 @@ This repository contains the implementation of the following paper:
    ```bash
    cd C2-Matching
    conda install pytorch=1.4.0 torchvision cudatoolkit=10.0 -c pytorch
-   conda install mmcv==0.4.4
+   pip install mmcv==0.4.4
    pip install -r requirements.txt
    ```
 
