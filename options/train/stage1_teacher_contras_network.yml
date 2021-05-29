@@ -11,8 +11,8 @@ datasets:
   train:
     name: CUFED
     type: ContrasDataset
-    dataroot_in: ../datasets/CUFED/input
-    dataroot_ref: ../datasets/CUFED/ref
+    dataroot_in: ./datasets/CUFED/input
+    dataroot_ref: ./datasets/CUFED/ref
     io_backend:
       type: disk
 
@@ -29,12 +29,12 @@ datasets:
   val:
     name: val_CUFED
     type: ContrasValDataset
-    dataroot_in: ../datasets/CUFED5
-    dataroot_ref: ../datasets/CUFED5
+    dataroot_in: ./datasets/CUFED5
+    dataroot_ref: ./datasets/CUFED5
     io_backend:
       type: disk
 
-    ann_file: ../datasets/contras_val.txt
+    ann_file: ./datasets/contras_val.txt
 
     bicubic_model: PIL
 

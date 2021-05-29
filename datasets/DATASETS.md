@@ -21,8 +21,8 @@ datasets:
   test_1:
     name: CUFED5
     type: RefCUFEDDataset
-    dataroot_in: ../datasets/CUFED5
-    dataroot_ref: ../datasets/CUFED5
+    dataroot_in: ./datasets/CUFED5
+    dataroot_ref: ./datasets/CUFED5
     io_backend:
       type: disk
 
@@ -55,14 +55,14 @@ datasets:
   test_1:
     name: WR-SR
     type: RefCUFEDDataset
-    dataroot_in: ../datasets/WR-SR/input
-    dataroot_ref: ../datasets/WR-SR/ref
+    dataroot_in: ./datasets/WR-SR/input
+    dataroot_ref: ./datasets/WR-SR/ref
     io_backend:
       type: disk
 
     bicubic_model: PIL
 
-    ann_file: ../datasets/WR-SR_pairs.txt
+    ann_file: ./datasets/WR-SR_pairs.txt
 ```
 
 ## Prepare Train Set

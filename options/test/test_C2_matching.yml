@@ -39,6 +39,6 @@ network_extractor:
 
 #### path
 path:
-  pretrain_model_g: ../experiments/pretrained_models/c2_matching_restoration.pth
-  pretrain_model_feature_extractor: ../experiments/pretrained_models/feature_extraction.pth
+  pretrain_model_g: ./experiments/pretrained_models/c2_matching_restoration.pth
+  pretrain_model_feature_extractor: ./experiments/pretrained_models/feature_extraction.pth
   strict_load: true

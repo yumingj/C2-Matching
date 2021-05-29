@@ -12,8 +12,8 @@ datasets:
   train:
     name: CUFED
     type: RefCUFEDDataset
-    dataroot_in: ../datasets/CUFED/input
-    dataroot_ref: ../datasets/CUFED/ref
+    dataroot_in: ./datasets/CUFED/input
+    dataroot_ref: ./datasets/CUFED/ref
     io_backend:
       type: disk
 
@@ -31,12 +31,12 @@ datasets:
   val:
     name: val_CUFED
     type: RefCUFEDDataset
-    dataroot_in: ../datasets/CUFED5
-    dataroot_ref: ../datasets/CUFED5
+    dataroot_in: ./datasets/CUFED5
+    dataroot_ref: ./datasets/CUFED5
     io_backend:
       type: disk
 
-    ann_file: ../datasets/CUFED5_pairs.txt
+    ann_file: ./datasets/CUFED5_pairs.txt
 
     bicubic_model: PIL
 
@@ -59,7 +59,7 @@ network_extractor:
 path:
   pretrain_model_g: ~
   pretrain_model_d: ~
-  pretrain_model_feature_extractor: ../experiments/stage2_student_contras_network/models/net_student_latest.pth
+  pretrain_model_feature_extractor: ./experiments/stage2_student_contras_network/models/net_student_latest.pth
   strict_load: true
   resume_state: ~
 
