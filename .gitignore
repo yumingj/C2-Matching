@@ -8,3 +8,6 @@ results/
 mmsr.egg-info/
 .vscode/
 build/
+*.pyc
+*.pth
+experiments/
