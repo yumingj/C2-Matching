@@ -143,7 +143,7 @@ For more results on the benchmarks, you can directly download our C2-Matching re
    If you find our repo useful for your research, please consider citing our paper:
 
    ```bibtex
-   @InProceedings{jiang2020c2matching,
+   @InProceedings{jiang2021c2matching,
       author = {Yuming Jiang and Kelvin C.K. Chan and Xintao Wang and Chen Change Loy and Ziwei Liu},
       title = {Robust Reference-based Super-Resolution via C2-Matching},
       booktitle={The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
