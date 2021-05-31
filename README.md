@@ -10,6 +10,7 @@ This repository contains the implementation of the following paper:
 
 [[Paper](https://yumingj.github.io/projects/C2_matching/)]
 [[Project Page](https://yumingj.github.io/projects/C2_matching/)]
+[[WR-SR Dataset](https://drive.google.com/drive/folders/1Pt7blJA2cK4oQ6yWB9tcHerZ4pwICmxp?usp=sharing)]
 
 ## Overview
 ![overall_structure](./assets/framework.png)
@@ -57,9 +58,9 @@ This repository contains the implementation of the following paper:
 ## Dataset Preparation
 
 - Train Set: [CUFED Dataset](https://drive.google.com/drive/folders/1hGHy36XcmSZ1LtARWmGL5OK1IUdWJi3I)
-- Test Set: [WR-SR Dataset](https://drive.google.com/file/d/1dB-GDGBOMHRSdN2v7IzJBMpHYHBIlNq-/view?usp=sharing), [CUFED5 Dataset](https://drive.google.com/file/d/1Fa1mopExA9YGG1RxrCZZn7QFTYXLx6ph/view)
+- Test Set: [WR-SR Dataset](https://drive.google.com/file/d/1dB-GDGBOMHRSdN2v7IzJBMpHYHBIlNq-/view?usp=sharing), [CUFED5 Dataset](https://drive.google.com/file/d/1C5XolT4-R4R8OB6A5cehJGZn63QVAJby/view?usp=sharing)
 
-Please refer to [Datasets.md](datasets/README.md) for pre-processing and more details.
+Please refer to [Datasets.md](datasets/DATASETS.md) for pre-processing and more details.
 
 ## Get Started
 
@@ -138,6 +139,16 @@ For more results on the benchmarks, you can directly download our C2-Matching re
 ![result](assets/visual_comp.png)
 
 
+## Webly-Reference SR Datasets
+
+Check out our Webly-Reference (WR-SR) SR Datasets through this [link](https://drive.google.com/drive/folders/1Pt7blJA2cK4oQ6yWB9tcHerZ4pwICmxp?usp=sharing)! We also provide the benchmark results for a quick comparison.
+
+Advantages:
+- Collected in a more realistic way: Reference images are searched using Google Image.
+- More diverse than previous datasets.
+
+![result](assets/dataset_illustration.png)
+
 ## Citataion
 
    If you find our repo useful for your research, please consider citing our paper:
@@ -154,7 +165,7 @@ For more results on the benchmarks, you can directly download our C2-Matching re
 
 ## License and Acknowledgement
 
-This project is open sourced under MIT license. The code framework is mainly modified from [BasicSR](https://github.com/xinntao/BasicSR). Please refer to the original repo for more usage and documents.
+This project is open sourced under MIT license. The code framework is mainly modified from [BasicSR](https://github.com/xinntao/BasicSR) and [MMSR](https://github.com/open-mmlab/mmediting) (Now reorganized as MMEditing). Please refer to the original repo for more usage and documents.
 
 
 ## Contact
