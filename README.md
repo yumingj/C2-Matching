@@ -8,8 +8,8 @@ This repository contains the implementation of the following paper:
 > Yuming Jiang, Kelvin C.K. Chan, Xintao Wang, Chen Change Loy, Ziwei Liu<br>
 > IEEE Conference on Computer Vision and Pattern Recognition (**CVPR**), 2021<br>
 
-[[Paper](https://yumingj.github.io/projects/C2_matching/)]
-[[Project Page](https://yumingj.github.io/projects/C2_matching/)]
+[[Paper](https://yumingj.github.io/projects/C2_matching)]
+[[Project Page](https://yumingj.github.io/projects/C2_matching)]
 [[WR-SR Dataset](https://drive.google.com/drive/folders/1Pt7blJA2cK4oQ6yWB9tcHerZ4pwICmxp?usp=sharing)]
 
 ## Overview
