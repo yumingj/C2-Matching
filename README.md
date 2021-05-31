@@ -58,7 +58,7 @@ This repository contains the implementation of the following paper:
 ## Dataset Preparation
 
 - Train Set: [CUFED Dataset](https://drive.google.com/drive/folders/1hGHy36XcmSZ1LtARWmGL5OK1IUdWJi3I)
-- Test Set: [WR-SR Dataset](https://drive.google.com/file/d/1dB-GDGBOMHRSdN2v7IzJBMpHYHBIlNq-/view?usp=sharing), [CUFED5 Dataset](https://drive.google.com/file/d/1C5XolT4-R4R8OB6A5cehJGZn63QVAJby/view?usp=sharing)
+- Test Set: [WR-SR Dataset](https://drive.google.com/drive/folders/16UKRu-7jgCYcndOlGYBmo5Pp0_Mq71hP?usp=sharing), [CUFED5 Dataset](https://drive.google.com/file/d/1C5XolT4-R4R8OB6A5cehJGZn63QVAJby/view?usp=sharing)
 
 Please refer to [Datasets.md](datasets/DATASETS.md) for pre-processing and more details.
 
@@ -141,7 +141,7 @@ For more results on the benchmarks, you can directly download our C2-Matching re
 
 ## Webly-Reference SR Datasets
 
-Check out our Webly-Reference (WR-SR) SR Datasets through this [link](https://drive.google.com/drive/folders/1Pt7blJA2cK4oQ6yWB9tcHerZ4pwICmxp?usp=sharing)! We also provide the benchmark results for a quick comparison.
+Check out our Webly-Reference (WR-SR) SR Datasets through this [link](https://drive.google.com/drive/folders/1Pt7blJA2cK4oQ6yWB9tcHerZ4pwICmxp?usp=sharing)! We also provide the benchmark results for a quick comparison through this [link](https://drive.google.com/drive/folders/1EkKIznCzYrqH-YlAM_4UhyyMkd2tRlzz?usp=sharing).
 
 Advantages:
 - Collected in a more realistic way: Reference images are searched using Google Image.
