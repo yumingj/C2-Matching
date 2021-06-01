@@ -139,11 +139,11 @@ For more results on the benchmarks, you can directly download our C2-Matching re
 ![result](assets/visual_comp.png)
 
 
-## Webly-Reference SR Datasets
+## Webly-Reference SR Dataset
 
-Check out our Webly-Reference (WR-SR) SR Datasets through this [link](https://drive.google.com/drive/folders/1Pt7blJA2cK4oQ6yWB9tcHerZ4pwICmxp?usp=sharing)! We also provide the benchmark results for a quick comparison through this [link](https://drive.google.com/drive/folders/1EkKIznCzYrqH-YlAM_4UhyyMkd2tRlzz?usp=sharing).
+Check out our Webly-Reference (WR-SR) SR Dataset through this [link](https://drive.google.com/drive/folders/1Pt7blJA2cK4oQ6yWB9tcHerZ4pwICmxp?usp=sharing)! We also provide the baseline results for a quick comparison in this [link](https://drive.google.com/drive/folders/1EkKIznCzYrqH-YlAM_4UhyyMkd2tRlzz?usp=sharing).
 
-Advantages:
+Webly-Reference SR dataset is a test dataset for evaluating Ref-SR methods. It has the following advantages:
 - Collected in a more realistic way: Reference images are searched using Google Image.
 - More diverse than previous datasets.
 
