@@ -33,7 +33,7 @@ datasets:
 
 ### Prepare WR-SR dataset
 
-1. Download the WR-SR dataset through this [link](https://drive.google.com/file/d/1dB-GDGBOMHRSdN2v7IzJBMpHYHBIlNq-/view?usp=sharing).
+1. Download the WR-SR dataset through this [link](https://drive.google.com/drive/folders/16UKRu-7jgCYcndOlGYBmo5Pp0_Mq71hP?usp=sharing).
 
 2. Put the WR-SR dataset into `datasets` folder. The folder structure should follow the format:
 ```
