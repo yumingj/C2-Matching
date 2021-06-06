@@ -149,7 +149,7 @@ Webly-Reference SR dataset is a test dataset for evaluating Ref-SR methods. It h
 
 ![result](assets/dataset_illustration.png)
 
-## Citaion
+## Citation
 
    If you find our repo useful for your research, please consider citing our paper:
 
