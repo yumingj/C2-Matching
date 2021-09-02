@@ -154,11 +154,12 @@ Webly-Reference SR dataset is a test dataset for evaluating Ref-SR methods. It h
    If you find our repo useful for your research, please consider citing our paper:
 
    ```bibtex
-   @InProceedings{jiang2021c2matching,
-      author = {Yuming Jiang and Kelvin C.K. Chan and Xintao Wang and Chen Change Loy and Ziwei Liu},
-      title = {Robust Reference-based Super-Resolution via C2-Matching},
-      booktitle={The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-      year = {2021}
+   @inproceedings{jiang2021robust,
+     title={Robust Reference-based Super-Resolution via C2-Matching},
+     author={Jiang, Yuming and Chan, Kelvin CK and Wang, Xintao and Loy, Chen Change and Liu, Ziwei},
+     booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+     pages={2103--2112},
+     year={2021}
    }
    ```
 
