@@ -53,13 +53,12 @@ For Vid4 dataset, please refer to this [link](https://drive.google.com/drive/fol
 
 We provide quick test code with the pretrained model.
 
-1. Run test code for models trained using **GAN loss**.
 
-    ```bash
-    python tools/test.py configs/restorers/refvsr/test_reds4.py pretrained_models/c2_matching_video.pth --save-path work_dirs/reds4_results\
+```bash
+python tools/test.py configs/restorers/refvsr/test_reds4.py pretrained_models/c2_matching_video.pth --save-path work_dirs/reds4_results\
 
-    python tools/test.py configs/restorers/refvsr/test_vid4.py pretrained_models/c2_matching_video.pth --save-path work_dirs/vid4_results
-    ```
+python tools/test.py configs/restorers/refvsr/test_vid4.py pretrained_models/c2_matching_video.pth --save-path work_dirs/vid4_results
+```
 
 
 
