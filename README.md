@@ -12,9 +12,10 @@ This repository contains the implementation of the following paper:
 [[Project Page](https://yumingj.github.io/projects/C2_matching)]
 [[WR-SR Dataset](https://drive.google.com/drive/folders/1Pt7blJA2cK4oQ6yWB9tcHerZ4pwICmxp?usp=sharing)]
 
+If you are looking for the code for Reference-based Video SR, please check out [this branch](https://github.com/yumingj/C2-Matching/tree/RefVSR). Thanks!
+
 ## Overview
 ![overall_structure](./assets/framework.png)
-
 
 
 ## Dependencies and Installation
