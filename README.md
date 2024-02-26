@@ -41,7 +41,13 @@ This repository contains the implementation of the following paper:
 ## Get Started
 
 ### Pretrained Models
-Downloading the pretrained models from this [link](https://drive.google.com/drive/folders/1dTkXMzeBrHelVQUEx5zib5MdmvqDaSd9?usp=sharing) and put them under `experiments/pretrained_models folder`.
+Downloading the pretrained models from this [link](https://drive.google.com/drive/folders/1qGyaJ61OkH5dCgcXZgx34q4j-HP-fzgs?usp=sharing) and put them under `experiments/pretrained_models folder`.
+
+### Dataset
+
+For REDS dataset, please refer to this [link](https://seungjunnah.github.io/Datasets/reds.html). The reference images are taken from the first frame of REDS 120fps. For your convience, we put the references of REDS4 dataset in this [link](https://drive.google.com/file/d/1Fc6TDBsUQ0pVVo72sInr08IjFGRAFA1f/view?usp=sharing).
+
+For Vid4 dataset, please refer to this [link](https://drive.google.com/drive/folders/1An6hF1oYkeWxfOBxxKm073mvgIFrBNDA).
 
 ### Test
 
